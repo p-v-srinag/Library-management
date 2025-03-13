@@ -19,15 +19,15 @@ To use this program, follow these steps:
    git clone https://github.com/yourusername/Library-Management-System.git
 Navigate to the project directory:
 
-   cd Library-Management-System
+         cd Library-Management-System
    
 Compile the C program:
 
-   gcc -o library_system main.c
+         gcc -o library_system main.c
    
 Run the program:
 
-   ./library_system
+         ./library_system
    
 How It Works:
 
