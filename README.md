@@ -19,20 +19,18 @@ To use this program, follow these steps:
    git clone https://github.com/yourusername/Library-Management-System.git
 Navigate to the project directory:
 
-bash
-Copy
-cd Library-Management-System
+   cd Library-Management-System
+   
 Compile the C program:
 
-bash
-Copy
-gcc -o library_system main.c
+   gcc -o library_system main.c
+   
 Run the program:
 
-bash
-Copy
-./library_system
-How It Works
+   ./library_system
+   
+How It Works:
+
 Book Initialization
 The program initializes a set of books at the start, each with the following details:
 
