@@ -1,55 +1,108 @@
-Key Structures:
-Book structure (struct book):
+# Student Library Management System
 
-name: Name of the book.
-author: Author of the book.
-id: Unique identifier for each book.
-next: Pointer to the next book in the list (linked list structure).
-Student structure (struct student):
+A simple C-based program that simulates a library management system for students. The system allows students to issue and return books, and it keeps track of student and book details using linked lists.
 
-name: Name of the student.
-email: Email of the student.
-book: Name of the book issued to the student.
-a: Author of the book issued.
-id: Book ID issued to the student.
-next: Pointer to the next student in the list (linked list structure).
-Core Functions:
-Library Initialization (initialize_lib):
+## Features
 
-Initializes the library with a set of books (predefined), each with a unique ID, name, and author.
-Books are linked in a list.
-Book Issue (book_issue):
+- **Book Issue**: Students can issue books by providing their details and selecting a book from the library.
+- **Book Return**: Students can return books, and the system updates the book inventory.
+- **Student Record**: The program maintains a record of students who have issued books, including their name, email, and book details.
+- **Dynamic Book Management**: Books are dynamically added or removed from the library collection based on issue and return actions.
+- **Simple Text-based Interface**: The program uses a menu-driven interface for user interaction.
 
-Displays available books in the library.
-Allows the user to enter the Book ID to issue it.
-Collects student details (name, email) and issues the book.
-The issued book is removed from the library list and added to the student’s record.
-Book Return (book_return):
+## Installation
 
-Allows a student to return a book by providing the Book ID.
-Searches the student records for the book and removes it from the student’s list.
-Adds the returned book back into the library collection.
-Display Student Details (display):
+To use this program, follow these steps:
 
-Shows the list of students who have issued books, along with the details like the student’s name, email, and the book issued.
-Book Deletion (delete_book):
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/Library-Management-System.git
+Navigate to the project directory:
 
-Deletes a book from the library collection, either by removing it entirely or adjusting the list to remove a specific book by ID.
-Add New Book (add_book):
+bash
+Copy
+cd Library-Management-System
+Compile the C program:
 
-Adds a new book to the library collection after a book is returned by a student.
-Menu and Greetings:
+bash
+Copy
+gcc -o library_system main.c
+Run the program:
 
-Main Menu (main_menu): Displays a menu with options to issue books, return books, display student details, or exit the program.
-Greetings (greetings): Displays a welcome message when the program starts.
-Features:
-Linked List Usage:
+bash
+Copy
+./library_system
+How It Works
+Book Initialization
+The program initializes a set of books at the start, each with the following details:
 
-Both books and students are stored as linked lists (start_lib for books and start for students).
-This allows easy traversal and dynamic modification (e.g., adding/removing books or student records).
-Book Issue and Return:
+Book Name
+Author
+Book ID
+Main Menu
+Once the program starts, a greeting message is displayed, and the main menu is shown with the following options:
 
-Books are dynamically added or removed from the library when issued or returned, keeping the library’s inventory up-to-date.
-Student Records:
+Issue Book: Allows a student to issue a book by providing their name, email, and selecting a book ID.
+Return Book: Allows a student to return a book by providing the Book ID.
+Display Student Details: Displays details of all students who have issued books.
+Exit: Exits the program.
+Book Issue
+The student selects a book by its Book ID.
+The system prompts for the student's name and email.
+The selected book is issued to the student, and it is removed from the library's available books.
+Book Return
+The student enters their Book ID to return the book.
+The system updates the student's record and adds the returned book back to the library.
+Display Student Details
+Displays a list of all students who have issued books, along with their personal details and the books they have borrowed.
+Example Output
+Main Menu:
 
-Each time a student issues or returns a book, a record of the transaction is maintained in the student’s linked list.
+markdown
+Copy
+*************************************************
+      MAIN MENU:
+     1. ISSUE OF BOOKS
+     2. RETURN OF BOOKS
+     3. DISPLAY STUDENT DETAILS
+     4. EXIT
+*************************************************
+      Enter your choice: 
+Book Issue:
+
+markdown
+Copy
+*************** Books Available: ****************
+
+_________________________________________________
+ Book 1
+ Book Title: The Kite Runner
+ Name of Author: Khaled Hosseini
+ Book ID: 101
+_________________________________________________
+Enter the Book ID: 101
+Enter Student Details:
+ Enter your Name: John Doe
+ Enter your Email: john.doe@example.com
+Issue of Book ID 101 done successfully!
+Book Return:
+
+markdown
+Copy
+*************** Books Submission: ****************
+
+Enter your Book ID: 101
+Student Name: John Doe
+Student Email: john.doe@example.com
+Name of Book Issued: The Kite Runner
+Book ID: 101
+Return of Book ID 101 done successfully!
+
+Code Structure
+main.c: Contains the main logic of the program, including the initialization, book issue, book return, and student record management.
+struct book: Defines the book structure with fields for name, author, ID, and a pointer to the next book.
+struct student: Defines the student structure with fields for name, email, book details, and a pointer to the next student.
+
+Acknowledgements
+This project was created to demonstrate basic data structures (linked lists) in C programming.
+Special thanks to all the open-source contributors who have inspired this project.
